@@ -1,0 +1,7 @@
+/tool fetch url="Github raw link" mode=https dst-path=file_name.rsc
+:delay 5s 
+:log info "Downloaded file_name.rsc succesfully"; 
+/ip firewall address-list remove [find where comment="Name"]; 
+/import file-name=file_name.rsc 
+:delay 10s 
+:log info "New file_name added successfully";
